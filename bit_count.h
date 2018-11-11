@@ -2,6 +2,7 @@
 #define BIT_COUNT_H
 
 #include <cstdint>
+#include <nmmintrin.h>
 
 //
 // method 1: simple iterating
@@ -93,9 +94,6 @@ unsigned bit_count_4(uint64_t x)
 //
 // method 5: popcount intrinsic
 //
-
-#include <nmmintrin.h>
-
 unsigned bit_count_5(uint32_t x)
 {
     return static_cast<unsigned>(_mm_popcnt_u32(x));

@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(main main.cpp)
-target_compile_options(main PRIVATE -mpopcnt)
+target_compile_options(main PRIVATE -mpopcnt -O3)
